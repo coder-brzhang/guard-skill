@@ -1,0 +1,8 @@
+{
+  "name": "guard",
+  "description": "技能杀毒软件 - 自动检测和阻止恶意技能的安装与执行，保护 Hermes 用户安全",
+  "version": "1.0.0",
+  "author": {
+    "name": "laomaxiaozhang"
+  }
+}

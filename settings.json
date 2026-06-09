@@ -1,0 +1,25 @@
+{
+  "guard": {
+    "auto_scan_on_install": true,
+    "auto_scan_on_load": true,
+    "block_critical": true,
+    "block_high": false,
+    "warn_medium": true,
+    "report_path": "~/.claude/guard-reports",
+    "scan_patterns_version": "1.0.0"
+  },
+  "skillOverrides": {},
+  "permissions": {
+    "allow": [
+      "Bash(find *)",
+      "Bash(cat *)",
+      "Bash(grep *)",
+      "Bash(ls *)",
+      "Bash(wc *)",
+      "Bash(readlink *)",
+      "Bash(file *)",
+      "Bash(shasum *)",
+      "Bash(md5 *)"
+    ]
+  }
+}
