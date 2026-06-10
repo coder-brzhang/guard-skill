@@ -14,6 +14,7 @@ SKILL_DIR="${1:-.}"
 EXCLUDE_FILES=(
   "scan-patterns.md"
   "README.md"
+  "scan-skill.sh"
 )
 
 # ============================================================
@@ -187,10 +188,10 @@ scan_skill_directory() {
     local sev
     sev=$(echo "$finding" | grep -o '"severity":"[^"]*"' | head -1 | cut -d'"' -f4)
     case "$sev" in
-      CRITICAL) ((critical++)) ;;
-      HIGH) ((high++)) ;;
-      MEDIUM) ((medium++)) ;;
-      LOW) ((low++)) ;;
+      CRITICAL) ((++critical)) ;;
+      HIGH) ((++high)) ;;
+      MEDIUM) ((++medium)) ;;
+      LOW) ((++low)) ;;
     esac
   done
 
@@ -226,7 +227,7 @@ scan_skill_directory() {
     else
       echo "    ${finding},"
     fi
-    ((i++))
+    ((++i))
   done
   echo "  ]"
   echo "}"
